@@ -33,7 +33,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lb_acesso = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pb_ledLogado = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.lOGINToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,9 +45,10 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.alunosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoAlunoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pb_ledLogado = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_ledLogado)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_ledLogado)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -103,17 +103,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Acesso:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // pb_ledLogado
-            // 
-            this.pb_ledLogado.Image = global::Projeto_Academia.Properties.Resources.img_red;
-            this.pb_ledLogado.Location = new System.Drawing.Point(3, 4);
-            this.pb_ledLogado.Name = "pb_ledLogado";
-            this.pb_ledLogado.Size = new System.Drawing.Size(20, 20);
-            this.pb_ledLogado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pb_ledLogado.TabIndex = 0;
-            this.pb_ledLogado.TabStop = false;
-            this.pb_ledLogado.Click += new System.EventHandler(this.pb_ledLogado_Click);
             // 
             // menuStrip1
             // 
@@ -210,6 +199,17 @@
             this.novoAlunoToolStripMenuItem.Text = "Novo Aluno";
             this.novoAlunoToolStripMenuItem.Click += new System.EventHandler(this.novoAlunoToolStripMenuItem_Click);
             // 
+            // pb_ledLogado
+            // 
+            this.pb_ledLogado.Image = global::Projeto_Academia.Properties.Resources.img_red;
+            this.pb_ledLogado.Location = new System.Drawing.Point(3, 4);
+            this.pb_ledLogado.Name = "pb_ledLogado";
+            this.pb_ledLogado.Size = new System.Drawing.Size(20, 20);
+            this.pb_ledLogado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pb_ledLogado.TabIndex = 0;
+            this.pb_ledLogado.TabStop = false;
+            this.pb_ledLogado.Click += new System.EventHandler(this.pb_ledLogado_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -224,9 +224,9 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_ledLogado)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_ledLogado)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -73,9 +73,9 @@
             // 
             // btn_logar
             // 
-            this.btn_logar.BackColor = System.Drawing.Color.Gray;
+            this.btn_logar.BackColor = System.Drawing.SystemColors.Control;
             this.btn_logar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_logar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_logar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_logar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_logar.Location = new System.Drawing.Point(12, 106);
             this.btn_logar.Name = "btn_logar";
@@ -87,7 +87,7 @@
             // 
             // btn_cancelar
             // 
-            this.btn_cancelar.BackColor = System.Drawing.Color.Gray;
+            this.btn_cancelar.BackColor = System.Drawing.SystemColors.Control;
             this.btn_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_cancelar.Location = new System.Drawing.Point(12, 137);

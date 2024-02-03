@@ -88,7 +88,8 @@ namespace Projeto_Academia
                 {
                     if (Globais.nivel >= 2)
                     {
-                        //PECEDIMENTOS
+                        F_NovoUsuario f_NovoUsuario = new F_NovoUsuario();
+                        f_NovoUsuario.ShowDialog();
                     }
                     else
                     {
@@ -109,7 +110,8 @@ namespace Projeto_Academia
                 {
                     if (Globais.nivel >= 2)
                     {
-                        //PECEDIMENTOS
+                        F_GestaoUsuarios f_GestaoUsuarios = new F_GestaoUsuarios();
+                        f_GestaoUsuarios.ShowDialog();
                     }
                     else
                     {
