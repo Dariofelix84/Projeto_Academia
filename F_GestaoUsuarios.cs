@@ -19,6 +19,14 @@ namespace Projeto_Academia
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            dgv_usuarios.DataSource = Banco.ObterUsuariosIdNome();
+            dgv_usuarios.Columns[0].Width = 85;
+            dgv_usuarios.Columns[1].Width = 190;
+
+        }
+
+        private void dgv_usuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

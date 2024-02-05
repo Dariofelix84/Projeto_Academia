@@ -63,9 +63,9 @@ namespace Projeto_Academia.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap img_green {
+        internal static System.Drawing.Bitmap img_green2 {
             get {
-                object obj = ResourceManager.GetObject("img_green", resourceCulture);
+                object obj = ResourceManager.GetObject("img_green2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,11 +73,12 @@ namespace Projeto_Academia.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap img_red {
+        internal static System.Drawing.Bitmap img_red2 {
             get {
-                object obj = ResourceManager.GetObject("img_red", resourceCulture);
+                object obj = ResourceManager.GetObject("img_red2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
     }
 }

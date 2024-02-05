@@ -57,7 +57,7 @@ namespace Projeto_Academia
         {
             lb_acesso.Text = "0";
             lb_nomeUsuario.Text = "---";
-            pb_ledLogado.Image = Properties.Resources.img_red;
+            pb_ledLogado.Image = Properties.Resources.img_red2;
             Globais.nivel = 0;
             Globais.logado = false;
         }
@@ -139,6 +139,15 @@ namespace Projeto_Academia
             }
         }
 
+        private void pb_ledLogado_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
 }
