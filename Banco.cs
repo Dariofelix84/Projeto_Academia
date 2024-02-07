@@ -66,9 +66,6 @@ namespace Projeto_Academia
 
         //Funções do FORM F_GestaoUsuarios
 
-
-
-        //Fim das Funções do FORM F_GestaoUsuarios
         public static DataTable ObterUsuariosIdNome()
         {
             SQLiteDataAdapter da = null;
@@ -88,6 +85,29 @@ namespace Projeto_Academia
                 throw ex;
             }
         }
+
+        public static DataTable ObterDadosUsuario(string id)
+        {
+            SQLiteDataAdapter da = null;
+            DataTable dt = new DataTable();
+            try
+            {
+                var vcon = ConexaoBanco();
+                var cmd = vcon.CreateCommand();
+                cmd.CommandText = "SELECT * FROM tb_usuarios WHERE N_IDUSUARIO="+id;
+                da = new SQLiteDataAdapter(cmd.CommandText, vcon);
+                da.Fill(dt);
+                vcon.Close();
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        //Fim das Funções do FORM F_GestaoUsuarios
+
 
         ////Funções do FORM F_NovoUsuario
 
