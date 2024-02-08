@@ -33,9 +33,7 @@ namespace Projeto_Academia
                 tb_senha.Text = dt.Rows[0].Field<string>("T_SENHAUSUARIO").ToString();
                 cb_status.Text = dt.Rows[0].Field<string>("T_STATUSUSUARIO").ToString();
                 n_nivel.Value = dt.Rows[0].Field<Int64>("N_NIVELUSUARIO");
-
             }
-
         }
 
         private void F_GestaoUsuarios_Load(object sender, EventArgs e)
@@ -43,7 +41,48 @@ namespace Projeto_Academia
             dgv_usuarios.DataSource = Banco.ObterUsuariosIdNome();
             dgv_usuarios.Columns[0].Width = 85;
             dgv_usuarios.Columns[1].Width = 210;
+        }
 
+        private void btn_novo_Click(object sender, EventArgs e)
+        {
+            F_NovoUsuario f_NovoUsuario = new F_NovoUsuario();
+            f_NovoUsuario.ShowDialog();
+            dgv_usuarios.DataSource = Banco.ObterUsuariosIdNome();
+        }
+
+        private void btn_salvar_Click(object sender, EventArgs e)
+        {
+            int linha = dgv_usuarios.SelectedRows[0].Index;
+            Usuario u = new Usuario();  
+            u.id = Convert.ToInt32(tb_id.Text);
+            u.nome = tb_nome.Text;
+            u.username = tb_username.Text;
+            u.senha = tb_senha.Text;
+            u.status = cb_status.Text;
+            //Linha 62 pode ser u.nivel = Convert.ToInt32(Math.Round(n_nivel.Value,0));
+            u.nivel = (int)n_nivel.Value;
+            Banco.AtualizarUsuario(u);
+            //dgv_usuarios.DataSource = Banco.ObterUsuariosIdNome();
+            //dgv_usuarios.CurrentCell = dgv_usuarios[0, linha];
+            dgv_usuarios[1, linha].Value = tb_nome.Text;
+
+
+
+        }
+
+        private void btn_excluir_Click(object sender, EventArgs e)
+        {
+            DialogResult res = MessageBox.Show("Confirma a exlusão ?","Excluir usuário ?", MessageBoxButtons.YesNo);
+            if (res == DialogResult.Yes)
+            {
+                Banco.Deletarusuario(tb_id.Text);
+                dgv_usuarios.Rows.Remove(dgv_usuarios.CurrentRow);
+            }
+        }
+
+        private void btn_fechar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
